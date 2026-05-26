@@ -296,32 +296,33 @@ function Index() {
 
       {/* WHY US */}
       <section id="why-us" className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.25em] text-primary">
             Why Kargobridge?
           </p>
           <h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl">
             Efficiency. Reliability. Innovation.
           </h2>
-        </div>
+        </Reveal>
         <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {reasons.map((r) => (
-            <div
+          {reasons.map((r, i) => (
+            <Reveal
               key={r}
+              delay={i * 90}
               className="flex items-start gap-4 rounded-lg bg-card p-6 shadow-sm"
             >
               <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <Check size={16} strokeWidth={3} />
               </div>
               <p className="text-base text-foreground">{r}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* PARTNER CTA */}
       <section className="bg-accent">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center">
+        <Reveal className="mx-auto max-w-4xl px-6 py-24 text-center">
           <h2 className="font-serif text-3xl text-foreground md:text-5xl">
             Partner With Us
           </h2>
@@ -336,19 +337,19 @@ function Index() {
           >
             Get In Touch
           </a>
-        </div>
+        </Reveal>
       </section>
 
       {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.25em] text-primary">
             Get in Touch
           </p>
           <h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl">
             Contact Us
           </h2>
-        </div>
+        </Reveal>
         <div className="mx-auto mt-12 max-w-3xl rounded-xl bg-card p-8 shadow-sm md:p-12">
           <div className="grid gap-6 md:grid-cols-2">
             <ContactRow
