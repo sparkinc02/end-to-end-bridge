@@ -4,7 +4,7 @@ interface RevealProps {
   children: React.ReactNode;
   delay?: number;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
 export function Reveal({ children, delay = 0, className = "", as: Tag = "div" }: RevealProps) {
