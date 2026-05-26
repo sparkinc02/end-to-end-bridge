@@ -99,10 +99,10 @@ const reasons = [
 ];
 
 const stats = [
-  { value: "50+", label: "Countries Served" },
-  { value: "200+", label: "Trusted Global Partners" },
-  { value: "1000+", label: "Shipments Monthly" },
-  { value: "24/7", label: "Shipment Monitoring" },
+  { num: 50, suffix: "+", label: "Countries Served" },
+  { num: 200, suffix: "+", label: "Trusted Global Partners" },
+  { num: 1000, suffix: "+", label: "Shipments Monthly" },
+  { num: 24, suffix: "/7", label: "Shipment Monitoring" },
 ];
 
 function Index() {
