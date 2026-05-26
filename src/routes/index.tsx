@@ -25,6 +25,7 @@ import {
   Wheat,
 } from "lucide-react";
 import { KargoLogo } from "@/components/KargoLogo";
+import { Reveal, CountUp } from "@/components/Reveal";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -99,10 +100,10 @@ const reasons = [
 ];
 
 const stats = [
-  { value: "50+", label: "Countries Served" },
-  { value: "200+", label: "Trusted Global Partners" },
-  { value: "1000+", label: "Shipments Monthly" },
-  { value: "24/7", label: "Shipment Monitoring" },
+  { num: 50, suffix: "+", label: "Countries Served" },
+  { num: 200, suffix: "+", label: "Trusted Global Partners" },
+  { num: 1000, suffix: "+", label: "Shipments Monthly" },
+  { num: 24, suffix: "/7", label: "Shipment Monitoring" },
 ];
 
 function Index() {
@@ -229,29 +230,30 @@ function Index() {
       {/* STATS */}
       <section className="border-y border-border bg-card">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-12 md:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
+          {stats.map((s, i) => (
+            <Reveal key={s.label} delay={i * 120} className="text-center">
               <div className="font-serif text-4xl text-primary md:text-5xl">
-                {s.value}
+                <CountUp end={s.num} suffix={s.suffix} />
               </div>
               <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* SERVICES */}
       <section id="services" className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.25em] text-primary">What We Offer</p>
           <h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl">
             Comprehensive Logistics Services Designed for Your Business
           </h2>
-        </div>
+        </Reveal>
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <div
+          {services.map((s, i) => (
+            <Reveal
               key={s.title}
+              delay={i * 90}
               className="group rounded-lg border-t-2 border-primary bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-accent text-primary">
@@ -261,7 +263,7 @@ function Index() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {s.desc}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -269,23 +271,24 @@ function Index() {
       {/* INDUSTRIES */}
       <section id="industries" className="bg-card border-y border-border">
         <div className="mx-auto max-w-7xl px-6 py-24">
-          <div className="mx-auto max-w-2xl text-center">
+          <Reveal className="mx-auto max-w-2xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-primary">Sectors</p>
             <h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl">
               Industries We Serve
             </h2>
-          </div>
+          </Reveal>
           <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3">
-            {industries.map((i) => (
-              <div
+            {industries.map((i, idx) => (
+              <Reveal
                 key={i.label}
+                delay={idx * 70}
                 className="flex items-center gap-4 rounded-md border border-border bg-background px-5 py-5 transition-colors hover:border-primary"
               >
                 <div className="text-primary">
                   <i.icon size={22} />
                 </div>
                 <span className="text-sm font-medium text-foreground">{i.label}</span>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -293,32 +296,33 @@ function Index() {
 
       {/* WHY US */}
       <section id="why-us" className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.25em] text-primary">
             Why Kargobridge?
           </p>
           <h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl">
             Efficiency. Reliability. Innovation.
           </h2>
-        </div>
+        </Reveal>
         <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {reasons.map((r) => (
-            <div
+          {reasons.map((r, i) => (
+            <Reveal
               key={r}
+              delay={i * 90}
               className="flex items-start gap-4 rounded-lg bg-card p-6 shadow-sm"
             >
               <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <Check size={16} strokeWidth={3} />
               </div>
               <p className="text-base text-foreground">{r}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* PARTNER CTA */}
       <section className="bg-accent">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center">
+        <Reveal className="mx-auto max-w-4xl px-6 py-24 text-center">
           <h2 className="font-serif text-3xl text-foreground md:text-5xl">
             Partner With Us
           </h2>
@@ -333,19 +337,19 @@ function Index() {
           >
             Get In Touch
           </a>
-        </div>
+        </Reveal>
       </section>
 
       {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.25em] text-primary">
             Get in Touch
           </p>
           <h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl">
             Contact Us
           </h2>
-        </div>
+        </Reveal>
         <div className="mx-auto mt-12 max-w-3xl rounded-xl bg-card p-8 shadow-sm md:p-12">
           <div className="grid gap-6 md:grid-cols-2">
             <ContactRow
