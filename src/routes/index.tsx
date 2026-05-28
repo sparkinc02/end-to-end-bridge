@@ -358,6 +358,7 @@ function Index() {
               icon={<MapPin size={20} />}
               label="Address"
               value="NO 21 North Tank Street, Muthamizh Nagar Kadaperi, Tambaram – 600045"
+              href="https://www.google.com/maps/search/?api=1&query=NO+21+North+Tank+Street+Muthamizh+Nagar+Kadaperi+Tambaram+600045"
             />
             <ContactRow
               icon={<Mail size={20} />}
@@ -369,14 +370,9 @@ function Index() {
               icon={<Phone size={20} />}
               label="Phone"
               value="9080054221"
-              href="tel:9080054221"
+              href="https://wa.me/919080054221"
             />
-            <ContactRow
-              icon={<Globe size={20} />}
-              label="Website"
-              value="www.Kargobridge.com"
-              href="https://www.Kargobridge.com"
-            />
+
             <ContactRow
               icon={<Clock size={20} />}
               label="Support"
