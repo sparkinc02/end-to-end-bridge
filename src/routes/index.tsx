@@ -196,10 +196,11 @@ function Index() {
 
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
-        <div className="mx-auto max-w-5xl px-6 py-24 text-center md:py-32">
+        <div className="mx-auto max-w-5xl px-6 pt-8 pb-24 text-center md:pt-12 md:pb-32">
           <div className="mx-auto mb-10 inline-flex text-primary animate-fade-up">
             <KargoLogo size={140} />
           </div>
+
           <h1 className="font-serif text-4xl leading-tight text-foreground md:text-6xl animate-fade-up">
             Your Global Logistics Partner for End-to-End Freight Solutions
           </h1>
