@@ -1,4 +1,5 @@
-import logoUrl from "@/assets/kargo-logo.png";
+import markUrl from "@/assets/kargo-mark.png";
+import fullUrl from "@/assets/kargo-full.png";
 
 interface Props {
   size?: number;
@@ -7,28 +8,17 @@ interface Props {
 }
 
 export function KargoLogo({ size = 64, className = "", showWordmark = false }: Props) {
-  // The uploaded asset includes both the mark and a favicon preview. We crop to
-  // just the mark using object-position + a clipped container.
+  const src = showWordmark ? fullUrl : markUrl;
+  const style = showWordmark
+    ? { height: size, width: "auto" as const }
+    : { height: size, width: size };
   return (
-    <span
-      className={`inline-block overflow-hidden ${className}`}
-      style={{ width: size, height: size }}
-      aria-label="Kargobridge logo"
-    >
-      <img
-        src={logoUrl}
-        alt="Kargobridge Logistics"
-        draggable={false}
-        style={{
-          width: size * (showWordmark ? 3.6 : 3.6),
-          height: "auto",
-          maxWidth: "none",
-          // Position to the logo mark area of the source image
-          objectFit: "none",
-          objectPosition: showWordmark ? "28% 42%" : "26% 38%",
-          transform: "translate(0,0)",
-        }}
-      />
-    </span>
+    <img
+      src={src}
+      alt="Kargobridge Logistics"
+      draggable={false}
+      className={className}
+      style={style}
+    />
   );
 }
