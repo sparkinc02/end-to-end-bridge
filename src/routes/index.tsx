@@ -9,8 +9,8 @@ import {
   MapPin,
   Mail,
   Phone,
-  Globe,
   Clock,
+
   Check,
   Menu,
   X,
