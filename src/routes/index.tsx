@@ -465,7 +465,7 @@ function ContactRow({
     </>
   );
   return href ? (
-    <a href={href} className="flex items-start gap-4 transition-opacity hover:opacity-80">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 transition-opacity hover:opacity-80">
       {content}
     </a>
   ) : (
