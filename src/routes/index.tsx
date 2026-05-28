@@ -25,6 +25,7 @@ import {
   Wheat,
 } from "lucide-react";
 import { KargoLogo } from "@/components/KargoLogo";
+import { IntroScreen } from "@/components/IntroScreen";
 import { Reveal, CountUp } from "@/components/Reveal";
 
 export const Route = createFileRoute("/")({
@@ -132,6 +133,7 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <IntroScreen />
       {/* NAVBAR */}
       <header
         className={`sticky top-0 z-50 bg-background/85 backdrop-blur transition-all ${
