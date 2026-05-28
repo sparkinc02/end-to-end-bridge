@@ -9,8 +9,8 @@ import {
   MapPin,
   Mail,
   Phone,
-  Globe,
   Clock,
+
   Check,
   Menu,
   X,
@@ -196,10 +196,11 @@ function Index() {
 
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
-        <div className="mx-auto max-w-5xl px-6 py-24 text-center md:py-32">
+        <div className="mx-auto max-w-5xl px-6 pt-8 pb-24 text-center md:pt-12 md:pb-32">
           <div className="mx-auto mb-10 inline-flex text-primary animate-fade-up">
             <KargoLogo size={140} />
           </div>
+
           <h1 className="font-serif text-4xl leading-tight text-foreground md:text-6xl animate-fade-up">
             Your Global Logistics Partner for End-to-End Freight Solutions
           </h1>
@@ -358,6 +359,7 @@ function Index() {
               icon={<MapPin size={20} />}
               label="Address"
               value="NO 21 North Tank Street, Muthamizh Nagar Kadaperi, Tambaram – 600045"
+              href="https://www.google.com/maps/search/?api=1&query=NO+21+North+Tank+Street+Muthamizh+Nagar+Kadaperi+Tambaram+600045"
             />
             <ContactRow
               icon={<Mail size={20} />}
@@ -369,14 +371,9 @@ function Index() {
               icon={<Phone size={20} />}
               label="Phone"
               value="9080054221"
-              href="tel:9080054221"
+              href="https://wa.me/919080054221"
             />
-            <ContactRow
-              icon={<Globe size={20} />}
-              label="Website"
-              value="www.Kargobridge.com"
-              href="https://www.Kargobridge.com"
-            />
+
             <ContactRow
               icon={<Clock size={20} />}
               label="Support"
