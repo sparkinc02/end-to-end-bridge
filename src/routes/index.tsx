@@ -477,6 +477,8 @@ function SocialIcon({ href, children }: { href: string; children: React.ReactNod
   return (
     <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="flex h-10 w-10 items-center justify-center rounded-full border border-primary text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
     >
       {children}
