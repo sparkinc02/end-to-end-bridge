@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   Plane,
@@ -10,7 +9,6 @@ import {
   Mail,
   Phone,
   Clock,
-
   Check,
   Menu,
   X,
@@ -27,25 +25,6 @@ import {
 import { KargoLogo } from "@/components/KargoLogo";
 import { IntroScreen } from "@/components/IntroScreen";
 import { Reveal, CountUp } from "@/components/Reveal";
-
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "Kargobridge Logistics PVT LTD — A Bridge to Connect Ends" },
-      {
-        name: "description",
-        content:
-          "Global freight & logistics partner: air, ocean, road, rail, warehousing and customs clearance. End-to-end supply chain solutions.",
-      },
-      { property: "og:title", content: "Kargobridge Logistics PVT LTD" },
-      {
-        property: "og:description",
-        content: "Your global logistics partner for end-to-end freight solutions.",
-      },
-    ],
-  }),
-});
 
 const nav = [
   { href: "#home", label: "Home" },
@@ -107,7 +86,7 @@ const stats = [
   { num: 24, suffix: "/7", label: "Shipment Monitoring" },
 ];
 
-function Index() {
+export default function Index() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
   const [scrolled, setScrolled] = useState(false);
