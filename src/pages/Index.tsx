@@ -82,7 +82,7 @@ const reasons = [
 const stats = [
   { num: 50, suffix: "+", label: "Countries Served" },
   { num: 200, suffix: "+", label: "Trusted Global Partners" },
-  { num: 1000, suffix: "+", label: "Shipments Monthly" },
+  // { num: 1000, suffix: "+", label: "Shipments Monthly" },
   { num: 24, suffix: "/7", label: "Shipment Monitoring" },
 ];
 
