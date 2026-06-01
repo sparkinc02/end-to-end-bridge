@@ -343,8 +343,8 @@ export default function Index() {
             <ContactRow
               icon={<Mail size={20} />}
               label="Email"
-              value="murugan.s@kargobridge.com"
-              href="mailto:murugan.s@kargobridge.com"
+              value="imp.chn@kargobridge.com"
+              href="mailto:imp.chn@kargobridge.com"
             />
             <ContactRow
               icon={<Phone size={20} />}
@@ -403,7 +403,7 @@ export default function Index() {
               Contact
             </h4>
             <ul className="space-y-2 text-sm text-footer-foreground/70">
-              <li>murugan.s@kargobridge.com</li>
+              <li>imp.chn@kargobridge.com</li>
               <li>9080054221</li>
               <li>Tambaram – 600045, India</li>
             </ul>
