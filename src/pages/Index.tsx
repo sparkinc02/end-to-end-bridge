@@ -211,7 +211,7 @@ export default function Index() {
 
       {/* STATS */}
       <section className="border-y border-border bg-card">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-12 md:grid-cols-4">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 place-items-center justify-center gap-8 px-6 py-12 sm:grid-cols-3">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 120} className="text-center">
               <div className="font-serif text-4xl text-primary md:text-5xl">
